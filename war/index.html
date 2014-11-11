@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dot &middot; of &middot; life</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<!-- 		<link href="css/slider.css" rel="stylesheet"/> -->
+<link href="css/dotoflife.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+	<!-- Navigation bar -->
+	<div class="navbar navbar-inverse navbar-static-top">
+		<div class="container">
+			<a href="#" class="navbar-brand">Dot &middot; of &middot; life</a>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-3" style="font-size: 90%;">
+				<div class="panel panel-default">
+					<div class="panel-heading"><h4>Dot of Life</h4></div>
+					<div class="panel-body">
+						<p>Conway's game of life, given any starting position. Start
+							with a two dimensional grid of cells, where each cell is either
+							alive or dead. The grid is finite, and no life can exist off the
+							edges. When calculating the next generation of the grid, follow
+							these four rules:</p>
+						<ul>
+							<li>Any live cell with fewer than two live neighbours dies,
+								as if caused by underpopulation.</li>
+							<li>Any live cell with more than three live neighbours dies,
+								as if by overcrowding.</li>
+							<li>Any live cell with two or three live neighbours lives on
+								to the next generation.</li>
+							<li>Any dead cell with exactly three live neighbours becomes
+								a live cell.</li>
+						</ul>
+					</div>
+					<div class="panel-footer"><a href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life">See in wiki page</a></div>
+				</div>
+				
+				<div class="centered">
+				<input id="play" type="button" class="btn btn-default" value="Play" />
+				<input id="pause" type="button" class="btn btn-default"
+					value="Pause" /> <input id="stop" type="button"
+					class="btn btn-default" value="Stop" /> <input id="step"
+					type="button" class="btn btn-default" value="Step" />
+				<div style="margin-top:15px;">
+					Fast
+					<input
+						id="slider" class="slider slider-horizontal" type="range" min="50"
+						max="1000" step="50" value="500" />
+					Slow
+				</div>
+				</div>
+			</div>
+
+			<!-- Content -->
+			<div class="col-md-9" role="main">
+				<p>
+					<canvas id="canvas" width="800" height="600" class="dol_canvas"> 
+						Your browser does not
+						support the canvas element. </canvas>
+				</p>
+
+			</div>
+
+		</div>
+		<!-- row -->
+	</div>
+	<!-- container -->
+
+
+	<script src="js/dotoflife.js"></script>
+	<!-- 		<script src="js/bootstrap-slider.js" ></script> -->
+	<script src="js/bootstrap.min.css"></script>
+	<script type="text/javascript">
+			main();
+		</script>
+</body>
+</html>
